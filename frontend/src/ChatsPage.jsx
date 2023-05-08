@@ -1,12 +1,13 @@
-import { PrettyChatWindow } from "react-chat-engine-pretty";
+import { PrettyChatWindow} from "react-chat-engine-pretty";
 
 const ChatsPage = (props) => {
   return (
     <div className="background">
       <PrettyChatWindow
-        projectId={import.meta.env.VITE_CHAT_ENGINE_PROJECT_ID}
+        projectId="2041396e-ab3f-4b60-b427-2572495bb2fd"
         username={props.user.username}
         secret={props.user.secret}
+        style={{height: '100%'}}
       />
     </div>
   );
