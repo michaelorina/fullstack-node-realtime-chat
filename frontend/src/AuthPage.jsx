@@ -8,7 +8,8 @@ const AuthPage = (props) => {
           'http://localhost/3001/authenticate',
           {username: value}
           )
-          .then()
+          .then((r) => props.onAuth({ ...r.data, secret: value }))
+          .catch((e) => console.log("Auth Error", e));
       props.onAuth({ username: value, secret: value });
     };
   
